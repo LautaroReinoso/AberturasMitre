@@ -1,0 +1,11 @@
+<app-head></app-head>
+<app-servicios></app-servicios>
+<app-lineas></app-lineas>
+<app-sobre-nosotros></app-sobre-nosotros>
+<app-footer 
+    [users]=[users[userCurrent]]
+    (OnChangeFromFooter)="onChangeFromFooter($event)"
+  
+></app-footer>
+<!-- [showEdit]=showEdit
+[loggedIn]="checkLoggedIn()" -->

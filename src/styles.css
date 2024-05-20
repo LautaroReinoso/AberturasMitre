@@ -1,0 +1,12 @@
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.bg-blue {
+    background-color: #457bbd;
+}
+.bg-grey{
+    background-color: rgb(223, 223, 223);
+}
+.overflow-hidden {
+    overflow: hidden;
+}

@@ -1,0 +1,67 @@
+<form [formGroup]="cardForm" (ngSubmit)="load()">
+    <div class="container-fluid d-flex justify-content-center">
+
+
+                
+           <!--      <label for="inputFile" class="labelInputFile" >
+                    <img class="pencil" src="../../../../assets/icon/pencil.png" alt="upload file" >
+                 </label> -->
+
+            <div class="d-flex grand">
+                <div class="d-flex flex-row items">
+                    <div class="itemTitle">
+                        <label for="id">
+                            Orden
+                        </label>
+                    </div>
+                    <div class="itemInput ">
+                        <input type="number" formControlName="id"  placeholder="Ingrese un número (0,1,2)">
+                    </div>
+                </div>
+            
+                <div class="d-flex flex-row items">
+                    <div class="itemTitle">
+                        <label for="title">
+                            Título
+                        </label>
+                    </div>
+                    <div class="itemInput ">
+                        <input type="text"  formControlName="title"  placeholder="Ingrese un título">
+                    </div>
+                </div>
+                
+               <div class=" d-flex flex-row items">
+                     <div class="itemTitle">
+                        <label for="text">
+                            Texto
+                        </label>
+                     </div>
+                    <div class="itemInput">
+                        <textarea class="textTarea" cols="35" rows="5" name="text" formControlName="text" placeholder="Ingrese un texto (max 450 c)" id=""></textarea>
+                       
+                    </div>
+               </div>
+                   
+               <div class="d-flex flex-row items">
+                    <div class="itemTitle">
+                        <label for="image">Imagen</label>
+                     </div>
+                     <div class="itemInput">
+                        <input class="inputBoton"  type="file" formControlName="image" accept=".png, .jpg,.jpeg"   id="inputFileImage">
+                        <label class="labelInputFile" for="inputFileImage">
+                            Buscar Imagen
+                        </label>
+                     </div>
+               </div>
+               <div  *ngIf="cardForm.get('id')?.invalid && cardForm.get('id')?.touched"  class="error-message">
+                <span  *ngIf="cardForm.get('id')?.errors">El ID es requerido.</span>
+              </div>
+              <div  *ngIf="cardForm.get('title')?.invalid && cardForm.get('title')?.touched"  class="error-message">
+                <span  *ngIf="cardForm.get('id')?.errors">El titulo debe tener mas de tres caracteres y menos de 80.</span>
+              </div>
+               <div class="d-flex justify-content-center m-3" >
+                    <button type="submit">Enviar</button>   
+               </div>
+            </div>
+        </div>
+</form>

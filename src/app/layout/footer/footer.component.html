@@ -1,0 +1,117 @@
+<div id="contacto" class="container-fluid bg-blue d-flex justify-content-center align-items-center">
+    <div class="container-fluid d-flex justify-content-between align-items-center p-5 flex-column flex-sm-row text-white">
+       
+        
+
+        <div class="container-fluid d-flex flex-column justify-content-center m-0 m-sm-2 m-sm-0">
+            <div class="d-flex align-items-center justify-content-start ">
+                
+                <a href="https://www.google.com/maps/place/Fabrica+de+Aberturas+Mitre,+Mitre+1366,+Fray+Luis+Beltrán,+Santa+Fe/@-32.7897284,-60.7260489,16z/data=!4m6!3m5!1s0x95b650778b479691:0x6a2938047ec4c41b!8m2!3d-32.7890696!4d-60.7274814!16s%2Fg%2F1hc2_ffst">
+                    <div >
+                        <img src="../../../assets/icon/footer/ubication.svg" class="iconFooter">
+                    </div>
+                </a>
+             
+                <div *ngIf = "showEdit&&loggedIn" class="d-flex flex-column justify-content-center" >
+                    <label for="text" >dirección</label>
+                    <input 
+                    class="input" 
+                      type="text" 
+                      placeholder="Ingrese la dirección"
+                      [(ngModel)]="users[userCurrent].direccion"
+                      required maxlength="60"  
+                      required minlength="5"   
+                      />                      
+                </div>
+                <h4  *ngIf = "(!showEdit)||(showEdit&&!loggedIn)" class="text"> {{ users[userCurrent].direccion}}</h4>
+             
+            </div>
+
+            <div class="d-flex align-items-center justify-content-start ">
+                    <img src="../../../assets/icon/footer/city.svg" alt="" class="iconFooter">
+                    <div *ngIf = "showEdit&&loggedIn"class="d-flex flex-column justify-content-center" >
+                        <label for="text" >Ciudad/Provincia</label>
+                        <input
+                          class="input" 
+                          type="text" 
+                          placeholder="Ingrese ciudad/Provincia"
+                          [(ngModel)]="users[userCurrent].ciudadProvincia"
+                          required maxlength="60"  
+                          required minlength="5"   
+                          />                      
+                    </div>
+                    <h4 *ngIf = "(!showEdit)||(showEdit&&!loggedIn)" class="text"> {{ users[userCurrent].ciudadProvincia}} </h4>
+            </div>
+        </div>
+        <div class="container-fluid d-flex flex-column m-0 m-sm-2 m-sm-0">
+            <div class="d-flex justify-content-start align-items-center ">
+                <a href="https://wa.link/10595g">
+                    <img src="../../../assets/icon/footer/wsp.svg" alt="" class="iconFooter">
+                </a>
+                <div *ngIf = "showEdit&&loggedIn" class="d-flex flex-column justify-content-center" >
+                    <label for="text" >Número de wsp</label>
+                    <input 
+                    class="input" 
+                      type="text" 
+                      placeholder="Ingrese número de wsp"
+                      [(ngModel)]="users[userCurrent].cel"
+                      required maxlength="14"  
+                      required minlength="11"   
+                      />                      
+                </div>
+                <h4 *ngIf = "(!showEdit)||(showEdit&&!loggedIn)" class="text"> {{ users[userCurrent].cel}}</h4>
+            </div>
+        <div class="d-flex justify-content-start align-items-center ">
+                <img src="../../../assets/icon/footer/hour.svg" alt="" class="iconFooter">
+                <div *ngIf = "showEdit&&loggedIn" class="d-flex flex-column justify-content-center" >
+                    <label for="text" >Horario</label>
+                    <input 
+                    class="input" 
+                      type="text" 
+                      placeholder="Ingrese Horario"
+                      [(ngModel)]="users[userCurrent].horario"
+                      required maxlength="60"  
+                      required minlength="5"   
+                      />                      
+                </div>
+                <h4  *ngIf = "(!showEdit)||(showEdit&&!loggedIn)"class="text"> {{ users[userCurrent].horario}} </h4>
+        </div>
+        </div>
+        <div class="container-fluid d-flex flex-column m-0 m-sm-2   m-sm-0">
+            <div class="d-flex justify-content-start align-items-center ">
+                <a href="https://www.facebook.com/aberturas.m">
+                    <img src="../../../assets/icon/footer/facebook.svg" alt="" class="iconFooter">
+                </a>
+                <div *ngIf = "showEdit&&loggedIn" class="d-flex flex-column justify-content-center" >
+                    <label for="text" >Usuario Facebook</label>
+                    <input 
+                    class="input" 
+                      type="text" 
+                      placeholder="Usuario de Facebook"
+                      [(ngModel)]="users[userCurrent].facebook"
+                      required maxlength="50"  
+                      required minlength="5"   
+                      />                      
+                </div>
+                <h4 *ngIf = "(!showEdit)||(showEdit&&!loggedIn)" class="text"> {{ users[userCurrent].facebook }} </h4>
+            </div>
+            <div class="d-flex justify-content-start align-items-center ">
+                <a href="https://www.instagram.com/aberturas.mitre/">
+                    <img src="../../../assets/icon/footer/instagram.svg" alt="" class="iconFooter">
+                </a>
+                <div *ngIf = "showEdit&&loggedIn" class="d-flex flex-column justify-content-center" >
+                    <label for="text" >Usuario Instagram</label>
+                    <input 
+                    class="input" 
+                      type="text" 
+                      placeholder="usuario de Instagram"
+                      [(ngModel)]="users[userCurrent].instagram"
+                      required maxlength="50"  
+                      required minlength="5"   
+                      />                      
+                </div>
+                <h4 *ngIf = "(!showEdit)||(showEdit&&!loggedIn)" class="text"> {{ users[userCurrent].instagram}} </h4>
+            </div>
+        </div>
+    </div>
+</div>

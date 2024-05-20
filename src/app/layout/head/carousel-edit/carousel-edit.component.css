@@ -1,0 +1,66 @@
+.pencil{
+    width: 50px;
+    background-color: rgb(199, 199, 199);
+    border-radius: 5px;
+    border: 2px solid rgb(235, 235, 235)
+}
+.inputBoton{
+    display: none;
+}
+
+.labelInputFile{
+    padding: 3px;
+    background-color: #457bbd;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+}
+.labelInputFile:active {
+    border-radius: 5px;
+    border: 2px solid  #457bbd;
+    color: #457bbd;
+    background-color:#eee;
+}
+.grand{
+    width: 400px;
+    padding: 20px;
+    flex-direction: column; 
+    border: 2px solid #eee;
+    border-radius: 5px;
+}
+input{
+    width: 215px;
+}
+.items{
+    border: 2px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 9px;
+
+}
+.itemTitle{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+   
+    display: flex;
+    justify-content: flex-start;
+}
+.itemInput{
+    justify-content: flex-end;
+}
+.textTarea{
+    background-color: transparent;
+ 
+    }
+button {
+    border-radius: 5px;
+    border: 2px solid #eee;
+    color: white;
+    background-color: #457bbd;
+}
+button:active {
+    border-radius: 5px;
+    border: 2px solid  #457bbd;
+    color: #457bbd;
+    background-color:#eee;
+}

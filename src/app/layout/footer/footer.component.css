@@ -1,0 +1,30 @@
+.iconFooter{
+    width: 30px;
+    margin: 1rem;
+}
+.text{
+    font-size: 16px;
+    font-weight: 350;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+    vertical-align: middle;
+ 
+}
+.input {
+   border-radius: 5px;
+   border: 2px solid white;
+   background: transparent;
+   color: #fff;
+   outline: none;
+}
+input::placeholder {
+    font-weight: lighter;
+    color: rgba(231, 231, 231, 0.8);
+  }
+
+@media only screen and (max-width: 750px) { 
+    .text{
+        letter-spacing: 1px;
+    }
+
+}

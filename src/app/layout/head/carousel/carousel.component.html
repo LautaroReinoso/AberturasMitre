@@ -1,0 +1,23 @@
+<!-- <input class="boton" type="file" accept=".png, .jpg,.jpeg"  (change)="loadImage($event)" id="inputFileImage">
+ -->
+
+<div class="contenedor" [style.height]="finalHeight">
+    <div class="contenedor__btns">
+        <img src="../../../../assets/icon/back.svg" (click)="setNext()" alt="" class="btns">
+        <img src="../../../../assets/icon/next.svg" (click)="setBack()" alt="" class="btns">
+    </div>
+    <div class="contenedor__carousel" [ngStyle]="{'width': items.length * 100 + '%',
+                            'margin-left': marginLeft + '%'}">
+        <div class="contenedor__carousel__items" *ngFor="let i of items"
+            [ngStyle]="{'margin-rigth': i.marginLeft + '%'}">
+            <img class="img-fluid" [src]="i.url">
+            <div class="contenedor__carousel__text">
+                <h6>{{i.title}}</h6>
+                <p>{{i.subtitle}}</p>
+            </div>
+        </div>
+    </div>
+    <label for="inputFileImage" class="labelInputFile" *ngIf="">
+        <img src="../../../../assets/icon/pencil.png" alt="">
+    </label>
+</div>

@@ -1,0 +1,25 @@
+<div class="container-fluid  grande" >
+  <div class="grandeCarta"
+      [ngStyle]="{'width': cards.length * 100 + '%',
+                    'height': finalHeight + 'px'
+     }"
+  >
+    <div    
+        class="container-fluid overflow-hidden carta text-white d-flex justify-content-center aling-items-center p-0 m-0"
+        *ngFor="let card of cards; let i = index"
+        [ngStyle]="{
+                    'transform': 'translateY(' + (marginLeft * -100) + '%)'}"
+          >
+        <img [src]="card.bg"  alt="" class=" img">
+        <div  [ngClass]="{'active': i === currentPosition}"
+              (mouseenter)="setActive(i)"
+              (mouseleave)="setActive(i)"  
+                class="card-body">
+                <h5 class="card-title text-center m-0 m-sm-3">{{card.title}}</h5>
+                <p class="card-text text-center">{{card.text}}</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!--  transform: 'translateX(' + getTranslateX(i) + '%)' -->

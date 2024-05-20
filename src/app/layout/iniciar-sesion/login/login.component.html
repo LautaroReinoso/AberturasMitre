@@ -1,0 +1,24 @@
+<div class="login container-fluid">
+    <form class="custom-form" [formGroup]="loginForm" (ngSubmit)="login($event)" method="post">
+      <h1>Iniciar sesion</h1>
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Email"
+        required
+      />
+ 
+    
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Contraseña"
+        required
+      />
+      <button type="submit" (click)="login($event)">Iniciar sesion</button>
+    </form>
+
+    
+  </div>
+
+     
